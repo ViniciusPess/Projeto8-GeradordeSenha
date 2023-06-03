@@ -1,0 +1,98 @@
+@font-face {
+    font-family: '04b';
+    src: url(04B_30__.TTF) format('truetype');
+}
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+    color: #00BFFF;
+    text-align: center;
+    font-family: '04b', sans-serif;
+    margin-bottom: 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-wrapper {
+    position: relative;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkbox-custom {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    background-color: #333;
+    border: 2px solid white;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.checkbox-custom::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 2px;
+    opacity: 0;
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked ~ .checkbox-custom::after {
+    opacity: 1;
+}
+
+button {
+    margin-top: 10px;
+    color: white;
+    background-color: #333;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+input[type="number"],
+input[type="checkbox"] {
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    margin-top: 10px;
+    width: 200px;
+    padding: 5px;
+    color: white;
+    background-color: #333;
+    border: none;
+}
